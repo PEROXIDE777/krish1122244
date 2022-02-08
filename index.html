@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="React.css" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+  </head>
+<body>
+<div id="root" ></div>
+<script type="text/babel">
+
+
+
+
+function Hello(props){
+     return(
+      <>
+      <div className="div">
+      <img src={props.imgSrc}/>
+      <h4 className="h4">{props.title}</h4>
+      <a href="/">
+      <button>Watch now</button>
+      </a>
+      </div>
+      </>
+        )
+      }
+
+      ReactDOM.render(
+      <>
+      <h3 className="h3">List of Netflix song</h3>
+      <Hello imgSrc="1.jpeg" title="SQUID GAME"/>
+      <Hello imgSrc="2.jpeg" title="ROBOT 2.O"/>
+      <Hello imgSrc="3.jpeg" title="W W E"/>
+      <Hello imgSrc="4.jpeg" title="PENNYWISE"/>
+      <Hello imgSrc="5.jpeg" title="M O N K"/>
+      </>
+      ,document.getElementById('root'))
+</script>
+</body>
